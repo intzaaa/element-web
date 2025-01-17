@@ -8,6 +8,23 @@ const ignore: string[] = [];
 
 ignore.push(...Object.values<string>(JSON.parse(fs.readFileSync(`${__dirname}/../components.json`, "utf-8"))));
 ignore.push("/index.ts");
+ignore.push("/jest-matrix-react.tsx");
+ignore.push("/customisations/");
+ignore.push("/test-utils/");
+
+// The following ignores are temporary and false-positives which need to be fixed
+ignore.push("/useLocalStorageState.ts");
+ignore.push("/blurhash.worker.ts");
+ignore.push("/OpenSpotlightPayload.ts");
+ignore.push("/PinnedMessageBadge.tsx");
+ignore.push("/editor/mock.ts");
+ignore.push("DeviceIsolationModeController.ts");
+ignore.push("urls.ts");
+ignore.push("/json.ts");
+ignore.push("/ReleaseAnnouncementStore.ts");
+ignore.push("/WidgetLayoutStore.ts");
+ignore.push("/common.ts");
+
 // We ignore js-sdk by default as it may export for other non element-web projects
 if (!includeJSSDK) ignore.push("matrix-js-sdk");
 

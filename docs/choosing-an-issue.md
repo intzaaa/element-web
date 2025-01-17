@@ -19,8 +19,7 @@ If you're looking for inspiration on where to start, keep reading!
 
 All the issues for Element Web live in the
 [element-web](https://github.com/element-hq/element-web) repository, including
-issues that actually need fixing in `matrix-react-sdk` or one of the related
-repos.
+issues that actually need fixing in one of the related repos.
 
 The first place to look is for
 [issues tagged with "good first issue"](https://github.com/element-hq/element-web/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
@@ -33,19 +32,19 @@ someone to add something.
 When you're looking through the list, here are some things that might make an
 issue a **GOOD** choice:
 
--   It is a problem or feature you care about.
--   It concerns a type of code you know a little about.
--   You think you can understand what's needed.
--   It already has approval from Element Web's designers (look for comments from
-    members of the
-    [Product](https://github.com/orgs/element-hq/teams/product/members) or
-    [Design](https://github.com/orgs/element-hq/teams/design/members) teams).
+- It is a problem or feature you care about.
+- It concerns a type of code you know a little about.
+- You think you can understand what's needed.
+- It already has approval from Element Web's designers (look for comments from
+  members of the
+  [Product](https://github.com/orgs/element-hq/teams/product/members) or
+  [Design](https://github.com/orgs/element-hq/teams/design/members) teams).
 
 Here are some things that might make it a **BAD** choice:
 
--   You don't understand it (maybe add a comment asking a clarifying question).
--   It sounds difficult, or is part of a larger change you don't know about.
--   **It is tagged with `X-Needs-Design` or `X-Needs-Product`.**
+- You don't understand it (maybe add a comment asking a clarifying question).
+- It sounds difficult, or is part of a larger change you don't know about.
+- **It is tagged with `X-Needs-Design` or `X-Needs-Product`.**
 
 **Element Web's Design and Product teams tend to be very busy**, so if you make
 changes that require approval from one of those teams, you will probably have

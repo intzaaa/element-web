@@ -1,12 +1,6 @@
 # Contributing code to Element Web
 
-Everyone is welcome to contribute code to Element Web, provided that they are
-willing to license their contributions under the same license as the project
-itself. We follow a simple 'inbound=outbound' model for contributions: the act
-of submitting an 'inbound' contribution means that the contributor agrees to
-license the code under the same terms as the project's overall 'outbound'
-license - in this case, Apache Software License v2 (see
-[LICENSE](LICENSE)).
+Everyone is welcome to contribute code to Element Web, provided that they are willing to license their contributions to Element under a [Contributor License Agreement](https://cla-assistant.io/element-hq/element-web) (CLA). This ensures that their contribution will be made available under an OSI-approved open-source license, currently licensed under Affero General Public License v3 (AGPLv3) or General Public License v3 (GPLv3) at your choice.
 
 ## How to contribute
 
@@ -26,26 +20,26 @@ Definitely don't use the GitHub default of "Update file.ts".
 
 As for your PR description, it should include these things:
 
--   References to any bugs fixed by the change (in GitHub's `Fixes` notation)
--   Describe the why and what is changing in the PR description so it's easy for
-    onlookers and reviewers to onboard and context switch. This information is
-    also helpful when we come back to look at this in 6 months and ask "why did
-    we do it like that?" we have a chance of finding out.
-    -   Why didn't it work before? Why does it work now? What use cases does it
-        unlock?
-    -   If you find yourself adding information on how the code works or why you
-        chose to do it the way you did, make sure this information is instead
-        written as comments in the code itself.
-    -   Sometimes a PR can change considerably as it is developed. In this case,
-        the description should be updated to reflect the most recent state of
-        the PR. (It can be helpful to retain the old content under a suitable
-        heading, for additional context.)
--   Include both **before** and **after** screenshots to easily compare and discuss
-    what's changing.
--   Include a step-by-step testing strategy so that a reviewer can check out the
-    code locally and easily get to the point of testing your change.
--   Add comments to the diff for the reviewer that might help them to understand
-    why the change is necessary or how they might better understand and review it.
+- References to any bugs fixed by the change (in GitHub's `Fixes` notation)
+- Describe the why and what is changing in the PR description so it's easy for
+  onlookers and reviewers to onboard and context switch. This information is
+  also helpful when we come back to look at this in 6 months and ask "why did
+  we do it like that?" we have a chance of finding out.
+    - Why didn't it work before? Why does it work now? What use cases does it
+      unlock?
+    - If you find yourself adding information on how the code works or why you
+      chose to do it the way you did, make sure this information is instead
+      written as comments in the code itself.
+    - Sometimes a PR can change considerably as it is developed. In this case,
+      the description should be updated to reflect the most recent state of
+      the PR. (It can be helpful to retain the old content under a suitable
+      heading, for additional context.)
+- Include both **before** and **after** screenshots to easily compare and discuss
+  what's changing.
+- Include a step-by-step testing strategy so that a reviewer can check out the
+  code locally and easily get to the point of testing your change.
+- Add comments to the diff for the reviewer that might help them to understand
+  why the change is necessary or how they might better understand and review it.
 
 ### Changelogs
 
@@ -85,9 +79,8 @@ element-web notes: Fix a bug where the 'Herd' button only worked on Tuesdays
 
 This example is for Element Web. You can specify:
 
--   matrix-react-sdk
--   element-web
--   element-desktop
+- element-web
+- element-desktop
 
 If your PR introduces a breaking change, use the `Notes` section in the same
 way, additionally adding the `X-Breaking-Change` label (see below). There's no need
@@ -103,10 +96,10 @@ Notes: Remove legacy `Camelopard` class. `Giraffe` should be used instead.
 
 Other metadata can be added using labels.
 
--   `X-Breaking-Change`: A breaking change - adding this label will mean the change causes a _major_ version bump.
--   `T-Enhancement`: A new feature - adding this label will mean the change causes a _minor_ version bump.
--   `T-Defect`: A bug fix (in either code or docs).
--   `T-Task`: No user-facing changes, eg. code comments, CI fixes, refactors or tests. Won't have a changelog entry unless you specify one.
+- `X-Breaking-Change`: A breaking change - adding this label will mean the change causes a _major_ version bump.
+- `T-Enhancement`: A new feature - adding this label will mean the change causes a _minor_ version bump.
+- `T-Defect`: A bug fix (in either code or docs).
+- `T-Task`: No user-facing changes, eg. code comments, CI fixes, refactors or tests. Won't have a changelog entry unless you specify one.
 
 If you don't have permission to add labels, your PR reviewer(s) can work with you
 to add them: ask in the PR description or comments.
@@ -119,14 +112,12 @@ checks, so please check back after a few minutes.
 
 Your PR should include tests.
 
-For new user facing features in `matrix-js-sdk`, `matrix-react-sdk` or `element-web`, you
-must include:
+For new user facing features in `matrix-js-sdk` or `element-web`, you must include:
 
 1. Comprehensive unit tests written in Jest. These are located in `/test`.
 2. "happy path" end-to-end tests.
-   These are located in `/playwright/e2e` in `matrix-react-sdk`, and
-   are run using `element-web`. Ideally, you would also include tests for edge
-   and error cases.
+   These are located in `/playwright/e2e`, and are run using `element-web`.
+   Ideally, you would also include tests for edge and error cases.
 
 Unit tests are expected even when the feature is in labs. It's good practice
 to write tests alongside the code as it ensures the code is testable from
@@ -140,8 +131,7 @@ end-to-end test; which is best depends on what sort of test most concisely
 exercises the area.
 
 Changes to must be accompanied by unit tests written in Jest.
-These are located in `/spec/` in `matrix-js-sdk` or `/test/` in `element-web`
-and `matrix-react-sdk`.
+These are located in `/spec/` in `matrix-js-sdk` or `/test/` in `element-web`.
 
 When writing unit tests, please aim for a high level of test coverage
 for new code - 80% or greater. If you cannot achieve that, please document

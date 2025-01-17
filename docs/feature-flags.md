@@ -5,10 +5,10 @@ flexibility and control over when and where those features are enabled.
 
 For example, flags make the following things possible:
 
--   Extended testing of a feature via labs on develop
--   Enabling features when ready instead of the first moment the code is released
--   Testing a feature with a specific set of users (by enabling only on a specific
-    Element instance)
+- Extended testing of a feature via labs on develop
+- Enabling features when ready instead of the first moment the code is released
+- Testing a feature with a specific set of users (by enabling only on a specific
+  Element instance)
 
 The size of the feature controlled by a feature flag may vary widely: it could
 be a large project like reactions or a smaller change to an existing algorithm.
@@ -35,7 +35,7 @@ clients commit to doing the associated clean up work once a feature stabilises.
 When starting work on a feature, we should create a matching feature flag:
 
 1. Add a new
-   [setting](https://github.com/matrix-org/matrix-react-sdk/blob/develop/src/settings/Settings.tsx)
+   [setting](https://github.com/element-hq/element-web/blob/develop/src/settings/Settings.tsx)
    of the form:
 
 ```js
@@ -93,14 +93,14 @@ Once we're confident that a feature is working well, we should remove or convert
 
 If the feature is meant to be turned off/on by the user:
 
-1. Remove `isFeature` from the [setting](https://github.com/matrix-org/matrix-react-sdk/blob/develop/src/settings/Settings.ts)
+1. Remove `isFeature` from the [setting](https://github.com/element-hq/element-web/blob/develop/src/settings/Settings.ts)
 2. Change the `default` to `true` (if desired).
 3. Remove the feature from the [labs documentation](https://github.com/element-hq/element-web/blob/develop/docs/labs.md)
 4. Celebrate! 🥳
 
 If the feature is meant to be forced on (non-configurable):
 
-1. Remove the [setting](https://github.com/matrix-org/matrix-react-sdk/blob/develop/src/settings/Settings.ts)
+1. Remove the [setting](https://github.com/element-hq/element-web/blob/develop/src/settings/Settings.ts)
 2. Remove all `getValue` lines that test for the feature.
 3. Remove the feature from the [labs documentation](https://github.com/element-hq/element-web/blob/develop/docs/labs.md)
 4. If applicable, remove the feature state from

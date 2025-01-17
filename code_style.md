@@ -3,10 +3,9 @@
 This code style applies to projects which the element-web team directly maintains or is reasonably
 adjacent to. As of writing, these are:
 
--   element-desktop
--   element-web
--   matrix-react-sdk
--   matrix-js-sdk
+- element-desktop
+- element-web
+- matrix-js-sdk
 
 Other projects might extend this code style for increased strictness. For example, matrix-events-sdk
 has stricter code organization to reduce the maintenance burden. These projects will declare their code
@@ -224,6 +223,12 @@ Unless otherwise specified, the following applies to all code:
         // ...
     }
     ```
+
+37. Avoid functions whose fundamental behaviour varies with different parameter types.
+    Multiple return types are fine, but if the function's behaviour is going to change significantly,
+    have two separate functions. For example, `SDKConfig.get()` with a string param which returns the
+    type according to the param given is ok, but `SDKConfig.get()` with no args returning the whole
+    config object would not be: this should just be a separate function.
 
 ## React
 
